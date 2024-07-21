@@ -5,7 +5,7 @@ import Button from "react-bootstrap/Button";
 import React from "react";
 import styles from "./BlissHotel.module.css";
 
-export const AboutUs = () => {
+export const AboutUsSpanish = () => {
   const router = useRouter();
 
   const handleSubscribe = () => {
@@ -14,7 +14,6 @@ export const AboutUs = () => {
 
   return (
     <div style={{ width: "100%", height: "100%", position: "relative" }}>
-      {/* Navigation Bar */}
       <div
         className="d-flex justify-content-center"
         style={{
@@ -35,7 +34,7 @@ export const AboutUs = () => {
           }}
           onClick={() => router.push("/")}
         >
-          Home
+          Hogar
         </div>
         <div
           style={{
@@ -48,7 +47,7 @@ export const AboutUs = () => {
           }}
           onClick={() => router.push("/explore")}
         >
-          Explore
+          Explorar
         </div>
         <div
           style={{
@@ -61,7 +60,7 @@ export const AboutUs = () => {
           }}
           onClick={() => router.push("/rooms")}
         >
-          Rooms
+          Habitaciones
         </div>
         <div
           style={{
@@ -74,7 +73,7 @@ export const AboutUs = () => {
           }}
           onClick={() => router.push("/about")}
         >
-          About
+          Acerca de
         </div>
         <div
           style={{
@@ -87,7 +86,7 @@ export const AboutUs = () => {
           }}
           onClick={() => router.push("/contact")}
         >
-          Contact
+          Contacto
         </div>
         <button
           style={{
@@ -100,9 +99,9 @@ export const AboutUs = () => {
             padding: "10px 20px",
             margin: "0 20px",
           }}
-          onClick={() => router.push("/about/about-spanish")}
+          onClick={() => router.push("/about")}
         >
-          Spanish
+          English
         </button>
       </div>
       {/* Book Now Button */}
@@ -119,7 +118,7 @@ export const AboutUs = () => {
           }}
           onClick={() => router.push("/booking")}
         >
-          Book now
+          Reservar ahora
         </button>
       </div>
       {/* Main Image Placeholder */}
@@ -175,7 +174,7 @@ export const AboutUs = () => {
             zIndex: 1,
           }}
         >
-          About us
+          Sobre nosotras
         </div>
         {/* Subtitle */}
         <div
@@ -189,7 +188,7 @@ export const AboutUs = () => {
             zIndex: 1,
           }}
         >
-          Experience Comfort and Luxury at Bliss Hotel
+          Experimente la comodidad y el lujo en Bliss Hotel
         </div>
       </div>
       {/* Room Options with White Background */}
@@ -243,7 +242,7 @@ export const AboutUs = () => {
                 marginTop: "350px",
               }}
             >
-              Jessica Bliss (Manager)
+              Jessica Bliss (Gerente)
             </div>
           </div>
           <div
@@ -258,26 +257,30 @@ export const AboutUs = () => {
               marginTop: "100px",
             }}
           >
-            Welcome to Bliss Hotel, your premier destination for comfort and
-            relaxation in Ottawa, Ontario. We offer a variety of rooms tailored
-            to meet the needs of singles, couples, and families.
+            Bienvenido a Bliss Hotel, su principal destino de comodidad y
+            relajación en Ottawa, Ontario. Ofrecemos una variedad de
+            habitaciones hechas a medida. para satisfacer las necesidades de
+            solteros, parejas y familias.
             <br />
             <br />
-            Each room is equipped with modern amenities, including free Wi-Fi,
-            flat-screen TVs, and luxurious bedding to ensure a restful stay.
+            Cada habitación está equipada con comodidades modernas, incluyendo
+            conexión Wi-Fi gratuita, Televisores de pantalla plana y ropa de
+            cama de lujo para garantizar una estancia tranquila.
             <br />
             <br />
-            Our hotel features a range of facilities designed to enhance your
-            experience. Enjoy our state-of-the-art gym, unwind in our tranquil
-            spa, and take a dip in the indoor pool. Please note that spa
-            services require prior arrangements; kindly contact our management
-            team in person to schedule your appointments.
+            Nuestro hotel cuenta con una gama de instalaciones diseñadas para
+            mejorar su experiencia. Disfrute de nuestro gimnasio de última
+            generación, relájese en nuestro tranquilo spa y darse un chapuzón en
+            la piscina cubierta. Tenga en cuenta que el spa los servicios
+            requieren arreglos previos; póngase en contacto con nuestra
+            dirección equipo en persona para programar sus citas.
             <br />
             <br />
-            At Bliss Hotel, we are dedicated to providing you with an
-            unforgettable stay, combining elegance, comfort, and exceptional
-            service. Whether you're here for business or leisure, we look
-            forward to welcoming you and ensuring your stay is truly blissful.
+            En Bliss Hotel, nos dedicamos a brindarle una estancia inolvidable,
+            combinando elegancia, confort y excepcional servicio. Ya sea que
+            esté aquí por negocios o por placer, buscamos Estamos encantados de
+            darle la bienvenida y garantizar que su estancia sea realmente
+            maravillosa.
           </div>
         </div>
       </div>
@@ -286,31 +289,31 @@ export const AboutUs = () => {
         <div className={styles.bottomSection}>
           <div className={styles.leftColumn}>
             <div className={styles.hotelName}>Bliss Hotel</div>
-            <div className={styles.quickLinks}>Quick links</div>
-            <div className={styles.quickLinkItem}>Room booking</div>
-            <div className={styles.quickLinkItem}>Rooms</div>
-            <div className={styles.quickLinkItem}>Contact</div>
+            <div className={styles.quickLinks}>Enlaces rápidos</div>
+            <div className={styles.quickLinkItem}>Reserva de habitacion</div>
+            <div className={styles.quickLinkItem}>Habitaciones</div>
+            <div className={styles.quickLinkItem}>Contacto</div>
           </div>
           <div className={styles.rightColumn}>
-            <div className={styles.company}>Company</div>
+            <div className={styles.company}>Compañía</div>
             <div className={styles.companyItem}>About</div>
           </div>
           <div className={styles.leaveReview}>
-            <div className={styles.reviewTitle}>Leave Us a Review</div>
-            <div className={styles.reviewItem}>Google Maps</div>
+            <div className={styles.reviewTitle}>Déjanos una reseña</div>
+            <div className={styles.reviewItem}>mapas de Google</div>
             <div className={styles.reviewItem}>Facebook</div>
             <div className={styles.reviewItem}>Instagram</div>
           </div>
           <div className={styles.newsletter}>
-            <div className={styles.newsletterTitle}>Newsletter</div>
+            <div className={styles.newsletterTitle}>Boletin informativo</div>
             <div className={styles.newsletterSubtitle}>
-              Kindly subscribe to our newsletter to get the most out of your
-              stay!
+              Suscríbete a nuestro boletín para aprovechar al máximo tu
+              ¡permanecer!
             </div>
             <div className={styles.newsletterForm}>
               <input
                 type="text"
-                placeholder="Enter your email"
+                placeholder="Introduce tu correo electrónico"
                 className={styles.newsletterInput}
               />
               <Button
@@ -318,7 +321,7 @@ export const AboutUs = () => {
                 variant="secondary"
                 className={styles.newsletterButton}
               >
-                Subscribe
+                Suscribir
               </Button>
             </div>
           </div>

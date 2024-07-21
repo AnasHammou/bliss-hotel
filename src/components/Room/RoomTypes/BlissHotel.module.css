@@ -1,0 +1,333 @@
+/* BlissHotel.module.css */
+
+.mainImage {
+  width: 100%;
+  height: 80vh;
+  background: rgba(124, 106, 70, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .mainImage img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.additionalSection {
+  background-color: #f8f9fa;
+  padding: 40px 0;
+  width: 100%;
+}
+
+.bottomSection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.leftColumn,
+.rightColumn,
+.leaveReview,
+.newsletter {
+  flex: 1;
+  min-width: 200px;
+  margin: 10px;
+}
+
+.hotelName {
+  font-size: 24px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.quickLinks,
+.company,
+.reviewTitle,
+.newsletterTitle {
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.quickLinkItem,
+.companyItem,
+.reviewItem,
+.newsletterSubtitle {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 5px;
+}
+
+.newsletterForm {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.newsletterInput {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+}
+
+.newsletterButton {
+  background-color: #7c6a46;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  cursor: pointer;
+}
+
+.newsletterButton:hover {
+  background-color: #6b5a37;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  position: absolute;
+  top: 16px;
+}
+
+.navLink {
+  margin: 0 20px;
+  color: #7c6a46;
+  font-size: 20px;
+  font-family: Poppins;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.bookNowButton {
+  position: absolute;
+  right: 20px;
+  top: 16px;
+  z-index: 10;
+}
+
+.mainImageBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.mainImageContent {
+  z-index: 1;
+  text-align: center;
+  color: white;
+  font-size: 60px;
+  font-family: Mulish;
+  font-weight: 800;
+}
+
+.facilitiesSection {
+  background-color: white;
+  width: 100%;
+  padding: 40px 0;
+  min-height: 800px;
+}
+
+.facilitiesTitle {
+  color: black;
+  font-size: 40px;
+  font-family: Poppins;
+  font-weight: 500;
+  text-align: center;
+}
+
+.facilitiesSubtitle {
+  color: black;
+  font-size: 15px;
+  font-family: Poppins;
+  font-weight: 500;
+  text-align: center;
+}
+
+.facilitiesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.facilityItem {
+  width: 100%;
+  height: 100%;
+  background: #fafafa;
+  border-radius: 5px;
+  border: 1px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.facilityIcon {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.facilityName {
+  color: #7c6a46;
+  font-size: 20px;
+  font-family: Poppins;
+  font-weight: 500;
+  text-align: center;
+}
+
+.additionalSection {
+  width: 100%;
+  margin-top: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.additionalImage {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.bottomSection {
+  width: 100%;
+  height: 300px;
+  background-color: #7c6a46;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.leftColumn,
+.rightColumn,
+.leaveReview,
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: white;
+}
+
+.hotelName {
+  font-size: 30px;
+  font-family: Poppins;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.quickLinks {
+  font-size: 20px;
+  font-family: Poppins;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.quickLinkItem {
+  font-size: 15px;
+  font-family: Poppins;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+
+.company {
+  font-size: 20px;
+  font-family: Poppins;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.companyItem {
+  font-size: 15px;
+  font-family: Poppins;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+
+.reviewTitle {
+  font-size: 20px;
+  font-family: Poppins;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.reviewItem {
+  font-size: 15px;
+  font-family: Poppins;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+
+.newsletterTitle {
+  font-size: 20px;
+  font-family: Poppins;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.newsletterSubtitle {
+  font-size: 15px;
+  font-family: Poppins;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.newsletterForm {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.newsletterInput {
+  width: 70%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #7c6a46;
+  font-size: 14px;
+  font-family: Poppins;
+  font-weight: 300;
+}
+
+.newsletterButton {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-family: Poppins;
+  font-weight: 500;
+  background-color: #7c6a46;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}

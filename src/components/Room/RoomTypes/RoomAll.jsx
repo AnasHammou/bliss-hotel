@@ -5,7 +5,7 @@ import Button from "react-bootstrap/Button";
 import React, { useState } from "react";
 import styles from "./BlissHotel.module.css";
 
-export const Room = () => {
+export const RoomAll = () => {
   const router = useRouter();
 
   const [checkedBoxes, setCheckedBoxes] = useState({
@@ -33,7 +33,7 @@ export const Room = () => {
       .join("-");
 
     const routes = {
-      "": "/rooms",
+      "": "/rooms", 
       "Couples Room": "/rooms/roomcouple",
       "Room for 3": "/rooms/room3",
       "Room for 4": "/rooms/room4",
@@ -56,6 +56,7 @@ export const Room = () => {
 
   return (
     <div style={{ width: "100%", height: "100%", position: "relative" }}>
+      {/* Navigation Bar */}
       <div
         className="d-flex justify-content-center"
         style={{
@@ -148,7 +149,6 @@ export const Room = () => {
           Book now
         </button>
       </div>
-
       {/* Main Image Placeholder */}
       <div
         className={styles.mainImage}
@@ -410,7 +410,7 @@ export const Room = () => {
               wordWrap: "break-word",
             }}
           >
-            Room for 2
+            Room for 3-4
           </div>
           <div
             style={{
@@ -535,7 +535,7 @@ export const Room = () => {
               wordWrap: "break-word",
             }}
           >
-            Room for 3
+            Room for Couples
           </div>
           <div
             style={{
@@ -660,7 +660,7 @@ export const Room = () => {
               wordWrap: "break-word",
             }}
           >
-            Room for 2
+            Room for 3
           </div>
           <div
             style={{

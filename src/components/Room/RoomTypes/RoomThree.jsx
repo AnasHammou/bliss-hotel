@@ -5,9 +5,10 @@ import Button from "react-bootstrap/Button";
 import React, { useState } from "react";
 import styles from "./BlissHotel.module.css";
 
-export const Room = () => {
+export const RoomThree = () => {
   const router = useRouter();
 
+  // Initialize state for checked boxes
   const [checkedBoxes, setCheckedBoxes] = useState({
     "Single Room": false,
     "Couples Room": false,
@@ -27,13 +28,15 @@ export const Room = () => {
   };
 
   const handleFacetedSearchClick = () => {
+    // Generate a key based on selected rooms
     const selectedRooms = Object.keys(checkedBoxes)
       .filter((room) => checkedBoxes[room])
       .sort()
       .join("-");
 
+    // Define routes for each combination
     const routes = {
-      "": "/rooms",
+      "": "/rooms", // No selection
       "Couples Room": "/rooms/roomcouple",
       "Room for 3": "/rooms/room3",
       "Room for 4": "/rooms/room4",
@@ -51,11 +54,13 @@ export const Room = () => {
       "Couples Room-Room for 3-Room for 4-Single Room": "/rooms/all",
     };
 
+    // Redirect to the appropriate route
     router.push(routes[selectedRooms]);
   };
 
   return (
     <div style={{ width: "100%", height: "100%", position: "relative" }}>
+      {/* Navigation Bar */}
       <div
         className="d-flex justify-content-center"
         style={{
@@ -148,7 +153,6 @@ export const Room = () => {
           Book now
         </button>
       </div>
-
       {/* Main Image Placeholder */}
       <div
         className={styles.mainImage}
@@ -410,7 +414,7 @@ export const Room = () => {
               wordWrap: "break-word",
             }}
           >
-            Room for 2
+            Room for 3
           </div>
           <div
             style={{
@@ -660,7 +664,7 @@ export const Room = () => {
               wordWrap: "break-word",
             }}
           >
-            Room for 2
+            Room for 3
           </div>
           <div
             style={{
@@ -754,3 +758,17 @@ export const Room = () => {
     </div>
   );
 };
+
+// export const Room = () => {
+//     const router = useRouter();
+
+//   const handleClick = () => {
+//     router.push('/room');
+//   };
+
+//   return (
+//     <Button variant="primary" onClick={handleClick}>
+//       Go to Room
+//     </Button>
+//   );
+// }

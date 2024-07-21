@@ -1,7 +1,6 @@
-// ContactUs.jsx
 "use client";
 import { useRouter } from "next/navigation";
-import React from "react";
+import React, { useState } from "react";
 import styles from "./BlissHotel.module.css";
 
 export const ContactUs = () => {
@@ -9,6 +8,55 @@ export const ContactUs = () => {
 
   const handleSubscribe = () => {
     alert("You have successfully subscribed to our mailing list!");
+  };
+
+  const [formValues, setFormValues] = useState({
+    fullName: "",
+    email: "",
+    phoneNumber: "",
+    notes: "",
+  });
+
+  const [formErrors, setFormErrors] = useState({
+    fullName: "",
+    email: "",
+    phoneNumber: "",
+    notes: "",
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormValues({ ...formValues, [name]: value });
+  };
+
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const validatePhoneNumber = (phoneNumber) => {
+    const phoneRegex = /^\d{10}$/; // Adjust the regex based on your phone number format
+    return phoneRegex.test(phoneNumber);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    let errors = {};
+    if (!formValues.fullName) errors.fullName = "Full Name is required";
+    if (!formValues.email || !validateEmail(formValues.email))
+      errors.email = "Valid Email is required";
+    if (!formValues.phoneNumber || !validatePhoneNumber(formValues.phoneNumber))
+      errors.phoneNumber = "Valid Phone Number is required";
+    if (!formValues.notes) errors.notes = "Notes are required";
+
+    setFormErrors(errors);
+
+    if (Object.keys(errors).length === 0) {
+      alert(
+        "Thank you for contacting Bliss Hotel! Our team will reach out within 2 business days via email."
+      );
+    }
   };
 
   return (
@@ -128,75 +176,88 @@ export const ContactUs = () => {
           minHeight: "800px",
         }}
       >
-        <div
+        <form
           style={{
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
           }}
+          onSubmit={handleSubmit}
         >
-          {["Full Name", "Email", "Phone Number", "Notes"].map(
-            (label, index) => (
-              <div key={index} style={{ marginBottom: "20px", width: "300px" }}>
+          {[
+            { label: "Full Name", name: "fullName", type: "text" },
+            { label: "Email", name: "email", type: "email" },
+            { label: "Phone Number", name: "phoneNumber", type: "tel" },
+            { label: "Notes", name: "notes", type: "textarea" },
+          ].map((field, index) => (
+            <div key={index} style={{ marginBottom: "20px", width: "300px" }}>
+              <div
+                style={{
+                  textAlign: "left",
+                  color: "black",
+                  fontSize: "20px",
+                  fontFamily: "Mulish",
+                  fontWeight: "400",
+                  marginBottom: "10px",
+                }}
+              >
+                {field.label}
+              </div>
+              {field.type === "textarea" ? (
+                <textarea
+                  name={field.name}
+                  value={formValues[field.name]}
+                  onChange={handleInputChange}
+                  placeholder={`Enter your ${field.label.toLowerCase()}`}
+                  style={{
+                    width: "100%",
+                    minHeight: "100px",
+                    borderRadius: "5px",
+                    border: "1px solid #ccc",
+                    padding: "5px",
+                    fontFamily: "Raleway",
+                    fontSize: "16px",
+                    backgroundColor: "white",
+                    color: "black",
+                  }}
+                />
+              ) : (
+                <input
+                  type={field.type}
+                  name={field.name}
+                  value={formValues[field.name]}
+                  onChange={handleInputChange}
+                  placeholder={`Enter your ${field.label.toLowerCase()}`}
+                  style={{
+                    width: "100%",
+                    height: "30px",
+                    borderRadius: "5px",
+                    border: "1px solid #ccc",
+                    padding: "5px",
+                    fontFamily: "Raleway",
+                    fontSize: "16px",
+                    backgroundColor: "white",
+                    color: "black",
+                  }}
+                />
+              )}
+              {formErrors[field.name] && (
                 <div
                   style={{
-                    textAlign: "left",
-                    color: "black",
-                    fontSize: "20px",
+                    color: "red",
+                    fontSize: "12px",
                     fontFamily: "Mulish",
                     fontWeight: "400",
-                    marginBottom: "10px",
+                    marginTop: "5px",
                   }}
                 >
-                  {label}
+                  {formErrors[field.name]}
                 </div>
-                {label === "Notes" ? (
-                  <textarea
-                    placeholder={`Enter your ${label.toLowerCase()}`}
-                    style={{
-                      width: "100%",
-                      minHeight: "100px",
-                      borderRadius: "5px",
-                      border: "1px solid #ccc",
-                      padding: "5px",
-                      fontFamily: "Raleway",
-                      fontSize: "16px",
-                      backgroundColor: "white",
-                      color: "black",
-                    }}
-                  />
-                ) : (
-                  <input
-                    type={
-                      label === "Email"
-                        ? "email"
-                        : label === "Phone Number"
-                        ? "tel"
-                        : "text"
-                    }
-                    placeholder={`Enter your ${label.toLowerCase()}`}
-                    style={{
-                      width: "100%",
-                      height: "30px",
-                      borderRadius: "5px",
-                      border: "1px solid #ccc",
-                      padding: "5px",
-                      fontFamily: "Raleway",
-                      fontSize: "16px",
-                      backgroundColor: "white",
-                      color: "black",
-                    }}
-                  />
-                )}
-              </div>
-            )
-          )}
+              )}
+            </div>
+          ))}
           <button
-            onClick={() =>
-              alert(
-                "Thank you for contacting Bliss Hotel! Our team will reach out within 2 business days via email."
-              )
-            }
+            type="submit"
             style={{
               width: "150px",
               height: "40px",
@@ -212,7 +273,7 @@ export const ContactUs = () => {
           >
             Submit
           </button>
-        </div>
+        </form>
       </div>
 
       {/* Image Placeholder */}
