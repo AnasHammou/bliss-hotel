@@ -10,6 +10,13 @@ export const Booking = () => {
   const handleSubscribe = () => {
     alert("You have successfully subscribed to our mailing list!");
   };
+  const handleSubmit =() => {
+
+      alert(
+        "You have successfully booked! Our team will reach out within 2 business days via email."
+      );
+
+  };
 
   return (
     <div style={{ width: "100%", height: "100%", position: "relative" }}>
@@ -205,6 +212,7 @@ export const Booking = () => {
               fontFamily: "Raleway",
               fontSize: "16px",
               backgroundColor: "white",
+              color:"black"
             }}
           />
 
@@ -235,6 +243,8 @@ export const Booking = () => {
               fontFamily: "Raleway",
               fontSize: "16px",
               backgroundColor: "white",
+              color:"black"
+
             }}
           />
 
@@ -265,6 +275,8 @@ export const Booking = () => {
               fontFamily: "Raleway",
               fontSize: "16px",
               backgroundColor: "white",
+              color:"black"
+
             }}
           />
 
@@ -295,6 +307,8 @@ export const Booking = () => {
               fontFamily: "Raleway",
               fontSize: "16px",
               backgroundColor: "white",
+              color:"black"
+
             }}
           />
 
@@ -311,7 +325,10 @@ export const Booking = () => {
               fontWeight: "500",
               border: "none",
               cursor: "pointer",
+              
             }}
+            onClick={handleSubmit}
+
           >
             Submit
           </button>

@@ -14,6 +14,7 @@ export const AboutUsSpanish = () => {
 
   return (
     <div style={{ width: "100%", height: "100%", position: "relative" }}>
+      {/* Navigation Bar */}
       <div
         className="d-flex justify-content-center"
         style={{

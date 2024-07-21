@@ -4,10 +4,10 @@ import { useRouter } from "next/navigation";
 import Button from "react-bootstrap/Button";
 import React, { useState } from "react";
 import styles from "./BlissHotel.module.css";
-
 export const RoomAll = () => {
   const router = useRouter();
 
+  // Initialize state for checked boxes
   const [checkedBoxes, setCheckedBoxes] = useState({
     "Single Room": false,
     "Couples Room": false,
@@ -27,13 +27,15 @@ export const RoomAll = () => {
   };
 
   const handleFacetedSearchClick = () => {
+    // Generate a key based on selected rooms
     const selectedRooms = Object.keys(checkedBoxes)
       .filter((room) => checkedBoxes[room])
       .sort()
       .join("-");
 
+    // Define routes for each combination
     const routes = {
-      "": "/rooms", 
+      "": "/rooms", // No selection
       "Couples Room": "/rooms/roomcouple",
       "Room for 3": "/rooms/room3",
       "Room for 4": "/rooms/room4",
@@ -51,6 +53,7 @@ export const RoomAll = () => {
       "Couples Room-Room for 3-Room for 4-Single Room": "/rooms/all",
     };
 
+    // Redirect to the appropriate route
     router.push(routes[selectedRooms]);
   };
 
@@ -316,11 +319,12 @@ export const RoomAll = () => {
           <button
             //onClick={() => router.push("/booking")}
             style={{
-              padding: "10px 2px",
-              left: 36,
-              top: 1200,
+              width:320,
+              height:50,
+              left: 10,
+              top: 1500,
               position: "absolute",
-              textAlign: "justify",
+              textAlign: "center",
               color: "white",
               fontSize: 15,
               fontFamily: "Poppins",
@@ -754,3 +758,17 @@ export const RoomAll = () => {
     </div>
   );
 };
+
+// export const Room = () => {
+//     const router = useRouter();
+
+//   const handleClick = () => {
+//     router.push('/room');
+//   };
+
+//   return (
+//     <Button variant="primary" onClick={handleClick}>
+//       Go to Room
+//     </Button>
+//   );
+// }

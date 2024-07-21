@@ -35,7 +35,7 @@ export const ContactUs = () => {
   };
 
   const validatePhoneNumber = (phoneNumber) => {
-    const phoneRegex = /^\d{10}$/; // Adjust the regex based on your phone number format
+    const phoneRegex = /^\d{10}$/;
     return phoneRegex.test(phoneNumber);
   };
 

@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import Button from "react-bootstrap/Button";
 import React, { useState } from "react";
 import styles from "./BlissHotel.module.css";
+
 export const RoomThreeSingleCouple = () => {
   const router = useRouter();
 
@@ -319,11 +320,12 @@ export const RoomThreeSingleCouple = () => {
           <button
             //onClick={() => router.push("/booking")}
             style={{
-              padding: "10px 2px",
-              left: 36,
-              top: 1200,
+              width:320,
+              height:50,
+              left: 10,
+              top: 1500,
               position: "absolute",
-              textAlign: "justify",
+              textAlign: "center",
               color: "white",
               fontSize: 15,
               fontFamily: "Poppins",
