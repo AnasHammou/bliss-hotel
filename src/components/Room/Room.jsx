@@ -235,7 +235,7 @@ export const Room = () => {
       >
         <div
           style={{
-            width: "100%",
+            // width: "100%",
             display: "flex",
             flexDirection: "column",
             justifyContent: "flex-start",
@@ -318,13 +318,13 @@ export const Room = () => {
               </div>
             )
           )}
+          <div>
           <button
             //onClick={() => router.push("/booking")}
             style={{
               width:320,
               height:50,
               left: 10,
-              top: 1100,
               position: "absolute",
               textAlign: "center",
               color: "white",
@@ -337,6 +337,7 @@ export const Room = () => {
           >
             Search now
           </button>
+          </div>
         </div>
 
         {/* New room details */}

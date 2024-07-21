@@ -316,13 +316,13 @@ export const RoomThreeFourCouple = () => {
               </div>
             )
           )}
+          <div>
           <button
             //onClick={() => router.push("/booking")}
             style={{
               width:320,
               height:50,
               left: 10,
-              top: 1100,
               position: "absolute",
               textAlign: "center",
               color: "white",
@@ -335,6 +335,7 @@ export const RoomThreeFourCouple = () => {
           >
             Search now
           </button>
+          </div>
         </div>
 
         {/* New room details */}
