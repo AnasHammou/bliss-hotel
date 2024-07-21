@@ -324,7 +324,7 @@ export const Room = () => {
               width:320,
               height:50,
               left: 10,
-              top: 1500,
+              top: 1100,
               position: "absolute",
               textAlign: "center",
               color: "white",
